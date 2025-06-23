@@ -19,7 +19,7 @@ const projects = [
       "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
     briefDescription:
       "Collaborative productivity tool with drag-and-drop task boards, real-time updates, team chat, file sharing, deadline tracking, and progress analytics. Built for seamless team coordination and project management with role-based permissions and notification system.",
-    tags: ["React", "Socket.io", "Node.js", "PostgreSQL", "Material-UI", "JWT"]
+    tags: ["React", "Node.js", "MSSQL", "Express.js", "vite"]
   },
   {
     id: 3,
