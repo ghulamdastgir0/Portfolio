@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my development skills and proj
 
 ## 🚀 Live Demo
 
-[View Live Portfolio]((https://ghulamdastgir0.github.io/Protfolio/)) <!-- Replace with your actual URL -->
+(https://ghulamdastgir0.github.io/Protfolio/) <!-- Replace with your actual URL -->
 
 ## ✨ Features
 
