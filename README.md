@@ -2,11 +2,9 @@
 
 A modern, responsive portfolio website showcasing my development skills and projects. Built with clean HTML, CSS, and JavaScript, featuring smooth animations, interactive elements, and optimized performance.
 
-![Portfolio Preview](https://ghulamdastgir0.github.io/Protfolio/)
-
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://your-portfolio-url.com) <!-- Replace with your actual URL -->
+[View Live Portfolio]((https://ghulamdastgir0.github.io/Protfolio/)) <!-- Replace with your actual URL -->
 
 ## ✨ Features
 
