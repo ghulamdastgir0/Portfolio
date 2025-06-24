@@ -1,99 +1,45 @@
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
-    description:
-      "A full-stack e-commerce solution built with React and Node.js featuring user authentication, payment integration, and admin dashboard.",
-    briefDescription:
-      "Complete e-commerce solution with modern UI/UX, secure payment processing, inventory management, and real-time order tracking. Features include user authentication, shopping cart, wishlist, product reviews, and comprehensive admin panel for managing products, orders, and customers.",
-    tags: ["React", "Node.js", "MongoDB", "Express", "Stripe", "JWT", "Redux"]
+    title: "Space Invaders Game",
+    description: "A classic arcade-style space shooter game built with C++ and Windows API, featuring alien waves, bullet mechanics, and a highscore system.",
+    briefDescription: "Classic implementation of the Space Invaders game where you control a spaceship defending Earth from waves of alien invaders. Features wave-based alien movement, bullet collision detection, increasing difficulty, and a top 5 highscore leaderboard system. Built using C++ with Windows GDI functions for 2D graphics rendering.",
+    tags: ["C++", "PF", "Game Development", "Graphics", "Console", "Windows API"]
   },
   {
     id: 2,
-    title: "Task Management App",
-    image:
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-    description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    briefDescription:
-      "Collaborative productivity tool with drag-and-drop task boards, real-time updates, team chat, file sharing, deadline tracking, and progress analytics. Built for seamless team coordination and project management with role-based permissions and notification system.",
-    tags: ["React", "Node.js", "MSSQL", "Express.js", "vite"]
+    title: "Social Network App",
+    description: "A console-based social networking application developed using C++ with OOP principles, featuring user interactions, posts, comments, and friend management.",
+    briefDescription: "Console-based Social Network Application demonstrating real-world social media features using Object-Oriented Programming concepts. Includes user authentication, home feed with friends' posts, like and comment functionality, post sharing, personal pages, friend list management, and page viewing. Built with clean code architecture focusing on classes, inheritance, encapsulation, and polymorphism.",
+    tags: ["C++", "OOP", "Console Application", "Social Media", "User Management"]
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    image:
-      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
-    description:
-      "A responsive weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.",
-    briefDescription:
-      "Comprehensive weather application with 7-day forecasts, interactive maps, weather alerts, historical data analysis, and location-based recommendations. Features beautiful data visualizations, multiple city tracking, and responsive design for all devices.",
-    tags: [
-      "JavaScript",
-      "Chart.js",
-      "OpenWeather API",
-      "CSS3",
-      "HTML5",
-      "Geolocation"
-    ]
+    title: "Maze Runner",
+    description: "A retro-style maze-running game crafted in x86 Assembly Language with procedurally generated mazes, collectibles, enemies, and time-based scoring.",
+    briefDescription: "Classic maze-running adventure game built in pure x86 Assembly Language featuring 5 unique procedurally generated mazes. Includes collectible items for bonus points, enemy avoidance mechanics, customizable countdown timer, real-time keyboard controls, and dynamic scoring system. Utilizes BIOS interrupts, custom interrupt handlers, and assembly optimization for smooth retro gameplay experience.",
+    tags: ["Assembly Language", "x86", "Game Development", "BIOS Interrupts", "Real-time", "Retro Gaming"]
   },
   {
     id: 4,
-    title: "Social Media App",
-    image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=250&fit=crop",
-    description:
-      "A social media platform with user authentication, real-time chat, post sharing, and social networking features.",
-    briefDescription:
-      "Full-featured social networking platform with real-time messaging, photo/video sharing, story features, friend connections, news feed algorithm, and privacy controls. Built for scalable social interactions with advanced features like live streaming and group chats.",
-    tags: [
-      "React",
-      "Firebase",
-      "Socket.io",
-      "Node.js",
-      "Cloudinary",
-      "JWT",
-      "Redux"
-    ]
+    title: "Task Management System",
+    description: "A comprehensive database-driven task management system with admin controls, task assignment, status tracking, and team collaboration features.",
+    briefDescription: "Database-driven task management system designed for team productivity and workflow management. Features secure admin authentication, task creation with deadlines and priorities, team member assignment via email, comprehensive status tracking (Pending, In Progress, Completed, Cancelled), advanced filtering and search capabilities, and priority-based task organization. Built with normalized database schema and clean UI for optimal user experience.",
+    tags: ["React", "Node.js", "MSSQL", "Database Design", "Team Management", "Authentication"]
   },
   {
     id: 5,
-    title: "Portfolio Website",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop",
-    description:
-      "A modern portfolio website showcasing development skills with responsive design and interactive animations.",
-    briefDescription:
-      "Personal portfolio showcasing projects, skills, and experience with modern design principles, smooth animations, contact forms, and optimized performance. Features dark/light themes, mobile-first approach, and SEO optimization for better visibility.",
-    tags: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "GSAP",
-      "EmailJS",
-      "Responsive Design"
-    ]
+    title: "Simon Game",
+    description: "A classic memory game built with HTML, CSS, jQuery, and JavaScript featuring interactive animations, sound effects, and progressive difficulty levels.",
+    briefDescription: "Interactive implementation of the classic Simon electronic memory game with modern web technologies. Features animated button flashes with corresponding sound effects, progressive level difficulty, game over detection with restart functionality, responsive design for all devices, and clean user interface. Built using jQuery for smooth animations and JavaScript for game logic, providing an engaging memory challenge experience.",
+    tags: ["HTML5", "CSS3", "JavaScript", "jQuery", "Game Development", "Interactive Design"]
   },
   {
     id: 6,
-    title: "Blog Platform",
-    image:
-      "https://images.unsplash.com/photo-1486312338219-ce68e2c6b696?w=400&h=250&fit=crop",
-    description:
-      "A content management system for bloggers with rich text editing, SEO optimization, and comment management.",
-    briefDescription:
-      "Feature-rich blogging platform with WYSIWYG editor, SEO optimization, comment system, user roles, analytics dashboard, and content scheduling. Built for content creators and publishers with advanced features like multi-author support and social media integration.",
-    tags: [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Quill.js",
-      "Express",
-      "SEO",
-      "Analytics"
-    ]
+    title: "Portfolio Website",
+    description: "A modern, responsive portfolio website showcasing development skills with smooth animations, interactive elements, and optimized performance.",
+    briefDescription: "Professional portfolio website built with modern web technologies and design principles. Features responsive design for all devices, smooth CSS animations and transitions, interactive project showcases with detailed modal views, contact form with email integration, SEO optimization for better visibility, fast loading performance, and clean maintainable code structure following best practices. Includes dynamic project loading, smooth scrolling navigation, and an elegant gradient-based design system.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX"]
   }
 ];
 
@@ -118,15 +64,12 @@ function loadProjects() {
   });
 }
 
-// Create cards
+// Create cards (removed image)
 function createProjectCard(project) {
   const card = document.createElement("div");
   card.className = "project-card";
 
   card.innerHTML = `
-    <div class="project-image">
-      <img src="${project.image}" alt="${project.title}" />
-    </div>
     <div class="project-content">
       <h3 class="project-title">${project.title}</h3>
       <p class="project-description">${project.description}</p>
@@ -164,37 +107,67 @@ function openProjectModal(project) {
   document.addEventListener("keydown", handleEscape);
 }
 
-// Create project modal structure
+// Create project modal structure - Improved design
 function createProjectModal() {
   const modal = document.createElement("div");
   modal.id = "projectModal";
   modal.className = "project-modal";
 
   modal.innerHTML = `
+    <div class="project-modal-overlay"></div>
     <div class="project-modal-content">
       <div class="project-modal-header">
-        <h2 class="project-modal-title" id="modalTitle"></h2>
+        <div class="project-modal-header-content">
+          <h2 class="project-modal-title" id="modalTitle"></h2>
+          <p class="project-modal-subtitle" id="modalSubtitle"></p>
+        </div>
         <button class="project-modal-close" onclick="closeProjectModal()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
       </div>
+      
       <div class="project-modal-body">
-        <div class="project-modal-left">
-          <div class="project-modal-description" id="modalDescription"></div>
-          <div class="project-modal-features">
-            <h4>Key Features</h4>
-            <ul id="modalFeatures"></ul>
+        <div class="project-modal-section">
+          <div class="section-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14,2 14,8 20,8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10,9 9,9 8,9"/>
+            </svg>
+          </div>
+          <div class="section-content">
+            <h3>Project Overview</h3>
+            <p class="project-modal-description" id="modalDescription"></p>
           </div>
         </div>
-        <div class="project-modal-right">
-          <div class="project-modal-image">
-            <img id="modalImage" src="/placeholder.svg" alt="" />
+
+        <div class="project-modal-section">
+          <div class="section-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
           </div>
-          <div class="project-modal-tags">
-            <h4>Technologies Used</h4>
+          <div class="section-content">
+            <h3>Key Features</h3>
+            <div class="features-grid" id="modalFeatures"></div>
+          </div>
+        </div>
+
+        <div class="project-modal-section">
+          <div class="section-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <div class="section-content">
+            <h3>Technologies Used</h3>
             <div class="project-tags-grid" id="modalTags"></div>
           </div>
         </div>
@@ -203,7 +176,7 @@ function createProjectModal() {
   `;
 
   modal.addEventListener("click", e => {
-    if (e.target === modal) {
+    if (e.target === modal || e.target.classList.contains('project-modal-overlay')) {
       closeProjectModal();
     }
   });
@@ -214,19 +187,25 @@ function createProjectModal() {
 // Populate modal with project data
 function populateModal(project) {
   document.getElementById("modalTitle").textContent = project.title;
-  document.getElementById("modalDescription").textContent =
-    project.briefDescription;
-  document.getElementById("modalImage").src = project.image;
-  document.getElementById("modalImage").alt = project.title;
+  document.getElementById("modalSubtitle").textContent = `${project.tags[0]} • ${project.tags[1] || 'Development'}`;
+  document.getElementById("modalDescription").textContent = project.briefDescription;
 
   // Generate features list
   const features = generateProjectFeatures(project.id);
-  const featuresList = document.getElementById("modalFeatures");
-  featuresList.innerHTML = "";
+  const featuresContainer = document.getElementById("modalFeatures");
+  featuresContainer.innerHTML = "";
   features.forEach(feature => {
-    const li = document.createElement("li");
-    li.textContent = feature;
-    featuresList.appendChild(li);
+    const featureElement = document.createElement("div");
+    featureElement.className = "feature-item";
+    featureElement.innerHTML = `
+      <div class="feature-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <span>${feature}</span>
+    `;
+    featuresContainer.appendChild(featureElement);
   });
 
   // Generate tags
@@ -244,52 +223,63 @@ function populateModal(project) {
 function generateProjectFeatures(projectId) {
   const featuresMap = {
     1: [
-      "Secure user authentication and authorization system",
-      "Real-time payment processing with Stripe integration",
-      "Comprehensive admin dashboard for inventory management",
-      "Advanced product search and filtering capabilities",
-      "Shopping cart and wishlist functionality",
-      "Order tracking and notification system"
+      "Classic arcade-style gameplay with spaceship controls",
+      "Wave-based alien movement with increasing difficulty",
+      "Bullet collision detection system",
+      "Real-time shooting mechanics for player and aliens",
+      "Top 5 highscore leaderboard system",
+      "2D graphics rendering using Windows GDI",
+      "Keyboard controls (Arrow keys, Spacebar, Enter, Escape)",
+      "Progressive speed increase as game advances"
     ],
     2: [
-      "Drag-and-drop task board interface",
-      "Real-time collaboration with Socket.io",
-      "Team chat and file sharing capabilities",
-      "Deadline tracking and progress analytics",
-      "Role-based permissions and access control",
-      "Email notifications and reminders"
+      "Secure user login and logout system",
+      "Home page displaying friends' posts",
+      "Like and unlike post functionality",
+      "Comment system for user interactions",
+      "Post sharing and memory sharing features",
+      "Personal user pages and profiles",
+      "Friend list management and viewing",
+      "Object-oriented design with clean architecture"
     ],
     3: [
-      "7-day weather forecasts with hourly updates",
-      "Interactive maps with weather overlays",
-      "Location-based weather alerts and notifications",
-      "Historical weather data analysis and charts",
-      "Multiple city tracking and comparison",
-      "Responsive design for all devices"
+      "5 unique procedurally generated mazes",
+      "Collectible items with point rewards",
+      "Enemy avoidance mechanics",
+      "Customizable countdown timer (1-9 minutes)",
+      "Real-time keyboard input using BIOS interrupts",
+      "Dynamic scoring system based on completion time",
+      "Custom interrupt handlers for precision timing",
+      "Assembly language optimization for smooth gameplay"
     ],
     4: [
-      "Real-time messaging and chat functionality",
-      "Photo and video sharing with cloud storage",
-      "Story features with automatic expiration",
-      "Friend connections and social networking",
-      "News feed algorithm and content curation",
-      "Privacy controls and security features"
+      "Admin registration and authentication system",
+      "Task creation with title, description, and deadlines",
+      "Team member assignment via email",
+      "Comprehensive status tracking system",
+      "Task filtering by status, date, and assignee",
+      "Priority-based task organization (High, Medium, Low)",
+      "Normalized database schema design",
+      "Clean and user-friendly interface"
     ],
     5: [
-      "Modern responsive design with smooth animations",
-      "Contact form with email integration",
-      "Project showcase with detailed descriptions",
-      "SEO optimization for better visibility",
-      "Dark/light theme toggle functionality",
-      "Performance optimization and fast loading"
+      "Interactive button animations with flash effects",
+      "Sound effects for each colored button",
+      "Progressive difficulty with increasing sequences",
+      "Game over detection and restart functionality",
+      "Responsive design for all screen sizes",
+      "jQuery-powered smooth animations",
+      "Memory challenge with visual and audio feedback",
+      "Clean and intuitive user interface"
     ],
     6: [
-      "WYSIWYG rich text editor for content creation",
-      "SEO optimization tools and meta management",
-      "Comment system with moderation features",
-      "User roles and permission management",
-      "Analytics dashboard with detailed insights",
-      "Content scheduling and publication workflow"
+      "Modern responsive design with CSS Grid and Flexbox",
+      "Interactive project showcase with detailed modal views",
+      "Smooth CSS animations and transitions",
+      "Contact form with email integration",
+      "Performance optimization and fast loading",
+      "Cross-browser compatibility testing",
+      "Clean and maintainable code structure"
     ]
   };
 
@@ -315,7 +305,7 @@ function closeProjectModal() {
 
 window.closeProjectModal = closeProjectModal;
 
-// Contact Form Handler
+// Contact Form Handler (Fixed email subject duplication)
 contactForm.addEventListener("submit", async e => {
   e.preventDefault();
 
@@ -346,16 +336,14 @@ contactForm.addEventListener("submit", async e => {
     const body = encodeURIComponent(`
 Name: ${data.name}
 Email: ${data.email}
-Subject: ${data.subject}
 
 Message:
 ${data.message}
     `);
 
-    // Open default email client
     window.location.href = `mailto:ghulamdastgir12905@gmail.com?subject=${subject}&body=${body}`;
 
-    // Show success message
+    // success message
     showFormStatus(
       "Thank you! Your message has been prepared. Your email client should open shortly.",
       "success"
