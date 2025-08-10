@@ -459,7 +459,7 @@ downloadCVBtn.addEventListener("click", e => {
 function downloadCV() {
   // Create a link element and trigger download
   const link = document.createElement("a");
-  link.href = "/public/cv.pdf";
+  link.href = "/public/Ghulam_Dastgir_CV.pdf";
   link.download = "Ghulam_Dastgir_CV.pdf";
   document.body.appendChild(link);
   link.click();
