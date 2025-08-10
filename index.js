@@ -2,44 +2,106 @@ const projects = [
   {
     id: 1,
     title: "Space Invaders Game",
-    description: "A classic arcade-style space shooter game built with C++ and Windows API, featuring alien waves, bullet mechanics, and a highscore system.",
-    briefDescription: "Classic implementation of the Space Invaders game where you control a spaceship defending Earth from waves of alien invaders. Features wave-based alien movement, bullet collision detection, increasing difficulty, and a top 5 highscore leaderboard system. Built using C++ with Windows GDI functions for 2D graphics rendering.",
-    tags: ["C++", "PF", "Game Development", "Graphics", "Console", "Windows API"]
+    description:
+      "A classic arcade-style space shooter game built with C++ and Windows API, featuring alien waves, bullet mechanics, and a highscore system.",
+    briefDescription:
+      "Classic implementation of the Space Invaders game where you control a spaceship defending Earth from waves of alien invaders. Features wave-based alien movement, bullet collision detection, increasing difficulty, and a top 5 highscore leaderboard system. Built using C++ with Windows GDI functions for 2D graphics rendering.",
+    tags: [
+      "C++",
+      "PF",
+      "Game Development",
+      "Graphics",
+      "Console",
+      "Windows API"
+    ]
   },
   {
     id: 2,
     title: "Social Network App",
-    description: "A console-based social networking application developed using C++ with OOP principles, featuring user interactions, posts, comments, and friend management.",
-    briefDescription: "Console-based Social Network Application demonstrating real-world social media features using Object-Oriented Programming concepts. Includes user authentication, home feed with friends' posts, like and comment functionality, post sharing, personal pages, friend list management, and page viewing. Built with clean code architecture focusing on classes, inheritance, encapsulation, and polymorphism.",
-    tags: ["C++", "OOP", "Console Application", "Social Media", "User Management"]
+    description:
+      "A console-based social networking application developed using C++ with OOP principles, featuring user interactions, posts, comments, and friend management.",
+    briefDescription:
+      "Console-based Social Network Application demonstrating real-world social media features using Object-Oriented Programming concepts. Includes user authentication, home feed with friends' posts, like and comment functionality, post sharing, personal pages, friend list management, and page viewing. Built with clean code architecture focusing on classes, inheritance, encapsulation, and polymorphism.",
+    tags: [
+      "C++",
+      "OOP",
+      "Console Application",
+      "Social Media",
+      "User Management"
+    ]
   },
   {
     id: 3,
     title: "Maze Runner",
-    description: "A retro-style maze-running game crafted in x86 Assembly Language with procedurally generated mazes, collectibles, enemies, and time-based scoring.",
-    briefDescription: "Classic maze-running adventure game built in pure x86 Assembly Language featuring 5 unique procedurally generated mazes. Includes collectible items for bonus points, enemy avoidance mechanics, customizable countdown timer, real-time keyboard controls, and dynamic scoring system. Utilizes BIOS interrupts, custom interrupt handlers, and assembly optimization for smooth retro gameplay experience.",
-    tags: ["Assembly Language", "x86", "Game Development", "BIOS Interrupts", "Real-time", "Retro Gaming"]
+    description:
+      "A retro-style maze-running game crafted in x86 Assembly Language with procedurally generated mazes, collectibles, enemies, and time-based scoring.",
+    briefDescription:
+      "Classic maze-running adventure game built in pure x86 Assembly Language featuring 5 unique procedurally generated mazes. Includes collectible items for bonus points, enemy avoidance mechanics, customizable countdown timer, real-time keyboard controls, and dynamic scoring system. Utilizes BIOS interrupts, custom interrupt handlers, and assembly optimization for smooth retro gameplay experience.",
+    tags: [
+      "Assembly Language",
+      "x86",
+      "Game Development",
+      "BIOS Interrupts",
+      "Real-time",
+      "Retro Gaming"
+    ]
   },
   {
     id: 4,
     title: "Task Management System",
-    description: "A comprehensive database-driven task management system with admin controls, task assignment, status tracking, and team collaboration features.",
-    briefDescription: "Database-driven task management system designed for team productivity and workflow management. Features secure admin authentication, task creation with deadlines and priorities, team member assignment via email, comprehensive status tracking (Pending, In Progress, Completed, Cancelled), advanced filtering and search capabilities, and priority-based task organization. Built with normalized database schema and clean UI for optimal user experience.",
-    tags: ["React", "Node.js", "MSSQL", "Database Design", "Team Management", "Authentication"]
+    description:
+      "A comprehensive database-driven task management system with admin controls, task assignment, status tracking, and team collaboration features.",
+    briefDescription:
+      "Database-driven task management system designed for team productivity and workflow management. Features secure admin authentication, task creation with deadlines and priorities, team member assignment via email, comprehensive status tracking (Pending, In Progress, Completed, Cancelled), advanced filtering and search capabilities, and priority-based task organization. Built with normalized database schema and clean UI for optimal user experience.",
+    tags: [
+      "React",
+      "Node.js",
+      "MSSQL",
+      "Database Design",
+      "Team Management",
+      "Authentication"
+    ]
   },
   {
     id: 5,
     title: "Simon Game",
-    description: "A classic memory game built with HTML, CSS, jQuery, and JavaScript featuring interactive animations, sound effects, and progressive difficulty levels.",
-    briefDescription: "Interactive implementation of the classic Simon electronic memory game with modern web technologies. Features animated button flashes with corresponding sound effects, progressive level difficulty, game over detection with restart functionality, responsive design for all devices, and clean user interface. Built using jQuery for smooth animations and JavaScript for game logic, providing an engaging memory challenge experience.",
-    tags: ["HTML5", "CSS3", "JavaScript", "jQuery", "Game Development", "Interactive Design"]
+    description:
+      "A classic memory game built with HTML, CSS, jQuery, and JavaScript featuring interactive animations, sound effects, and progressive difficulty levels.",
+    briefDescription:
+      "Interactive implementation of the classic Simon electronic memory game with modern web technologies. Features animated button flashes with corresponding sound effects, progressive level difficulty, game over detection with restart functionality, responsive design for all devices, and clean user interface. Built using jQuery for smooth animations and JavaScript for game logic, providing an engaging memory challenge experience.",
+    tags: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "jQuery",
+      "Game Development",
+      "Interactive Design"
+    ]
   },
   {
     id: 6,
     title: "Portfolio Website",
-    description: "A modern, responsive portfolio website showcasing development skills with smooth animations, interactive elements, and optimized performance.",
-    briefDescription: "Professional portfolio website built with modern web technologies and design principles. Features responsive design for all devices, smooth CSS animations and transitions, interactive project showcases with detailed modal views, contact form with email integration, SEO optimization for better visibility, fast loading performance, and clean maintainable code structure following best practices. Includes dynamic project loading, smooth scrolling navigation, and an elegant gradient-based design system.",
+    description:
+      "A modern, responsive portfolio website showcasing development skills with smooth animations, interactive elements, and optimized performance.",
+    briefDescription:
+      "Professional portfolio website built with modern web technologies and design principles. Features responsive design for all devices, smooth CSS animations and transitions, interactive project showcases with detailed modal views, contact form with email integration, SEO optimization for better visibility, fast loading performance, and clean maintainable code structure following best practices. Includes dynamic project loading, smooth scrolling navigation, and an elegant gradient-based design system.",
     tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX"]
+  },
+  {
+    id: 7,
+    title: "Expense Manager App",
+    description:
+      "A full-stack personal finance app to track income, expenses, and budgets with real-time updates and intuitive UI.",
+    briefDescription:
+      "Comprehensive expense manager built with React, Node.js, Express, and PostgreSQL. Features include responsive design using CSS Grid and Flexbox, interactive dashboards with detailed charts and reports, smooth animations, secure user authentication, and optimized backend performance. Supports adding, editing, and deleting transactions with category-wise expense tracking, monthly comparisons, and notifications. Clean, maintainable codebase following modern best practices and cross-browser compatibility.",
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Responsive Design",
+      "Finance Management"
+    ]
   }
 ];
 
@@ -176,7 +238,10 @@ function createProjectModal() {
   `;
 
   modal.addEventListener("click", e => {
-    if (e.target === modal || e.target.classList.contains('project-modal-overlay')) {
+    if (
+      e.target === modal ||
+      e.target.classList.contains("project-modal-overlay")
+    ) {
       closeProjectModal();
     }
   });
@@ -187,8 +252,10 @@ function createProjectModal() {
 // Populate modal with project data
 function populateModal(project) {
   document.getElementById("modalTitle").textContent = project.title;
-  document.getElementById("modalSubtitle").textContent = `${project.tags[0]} • ${project.tags[1] || 'Development'}`;
-  document.getElementById("modalDescription").textContent = project.briefDescription;
+  document.getElementById("modalSubtitle").textContent = `${project
+    .tags[0]} • ${project.tags[1] || "Development"}`;
+  document.getElementById("modalDescription").textContent =
+    project.briefDescription;
 
   // Generate features list
   const features = generateProjectFeatures(project.id);
@@ -280,6 +347,15 @@ function generateProjectFeatures(projectId) {
       "Performance optimization and fast loading",
       "Cross-browser compatibility testing",
       "Clean and maintainable code structure"
+    ],
+    7: [
+      "Modern responsive design with CSS Grid and Flexbox",
+      "Interactive project showcase with detailed modal views",
+      "Smooth CSS animations and transitions throughout the site",
+      "Contact form with client-side validation and email integration",
+      "Performance optimized for fast loading and cross-browser compatibility",
+      "Clean and maintainable code using vanilla JavaScript, HTML5, and CSS3",
+      "Mobile-first approach with accessible and SEO-friendly structure"
     ]
   };
 
