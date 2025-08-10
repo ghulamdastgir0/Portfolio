@@ -349,13 +349,13 @@ function generateProjectFeatures(projectId) {
       "Clean and maintainable code structure"
     ],
     7: [
-      "Modern responsive design with CSS Grid and Flexbox",
-      "Interactive project showcase with detailed modal views",
-      "Smooth CSS animations and transitions throughout the site",
-      "Contact form with client-side validation and email integration",
-      "Performance optimized for fast loading and cross-browser compatibility",
-      "Clean and maintainable code using vanilla JavaScript, HTML5, and CSS3",
-      "Mobile-first approach with accessible and SEO-friendly structure"
+      "Full-stack expense tracker built with React (Vite), Tailwind CSS, Node.js, Express, and PostgreSQL",
+      "Features user registration, transaction CRUD, budget tracking, and multi-currency support",
+      "Secure JWT authentication with bcrypt password hashing",
+      "Modular backend using stored procedures and constraints for data integrity",
+      "Responsive UI with profile settings and optional receipt uploads",
+      "Setup requires Node.js ≥16 and PostgreSQL ≥13 with easy install and run commands",
+      "Clean project structure separating frontend and backend codebases for maintainability"
     ]
   };
 
