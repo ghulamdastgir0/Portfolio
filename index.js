@@ -1,107 +1,57 @@
 const projects = [
   {
     id: 1,
-    title: "Space Invaders Game",
+    title: "PRISM – Biometric Presence Verification",
     description:
-      "A classic arcade-style space shooter game built with C++ and Windows API, featuring alien waves, bullet mechanics, and a highscore system.",
+      "A full-stack AI-powered biometric attendance system using facial recognition and liveness detection to eliminate proxy fraud and identity spoofing on campus.",
     briefDescription:
-      "Classic implementation of the Space Invaders game where you control a spaceship defending Earth from waves of alien invaders. Features wave-based alien movement, bullet collision detection, increasing difficulty, and a top 5 highscore leaderboard system. Built using C++ with Windows GDI functions for 2D graphics rendering.",
-    tags: [
-      "C++",
-      "PF",
-      "Game Development",
-      "Graphics",
-      "Console",
-      "Windows API"
-    ]
+      "PRISM tackles campus proxy attendance fraud with a full-stack MERN + FastAPI architecture. It implements AI-driven facial recognition and liveness detection using OpenCV and MediaPipe, along with dual-mode authentication (face + fingerprint). The backend features confidence scoring, anomaly detection, and encrypted biometric templates for secure processing. Reduced proxy attendance and identity fraud risk to near zero in testing environments.",
+    tags: ["MERN Stack", "FastAPI", "Python", "OpenCV", "MediaPipe", "AI/ML", "Biometrics", "MongoDB"]
   },
   {
     id: 2,
-    title: "Social Network App",
+    title: "Air Drawing – Real-Time CV Tool",
     description:
-      "A console-based social networking application developed using C++ with OOP principles, featuring user interactions, posts, comments, and friend management.",
+      "A contactless, real-time drawing application powered by computer vision — draw, erase, and switch colors entirely through hand gestures with no physical input required.",
     briefDescription:
-      "Console-based Social Network Application demonstrating real-world social media features using Object-Oriented Programming concepts. Includes user authentication, home feed with friends' posts, like and comment functionality, post sharing, personal pages, friend list management, and page viewing. Built with clean code architecture focusing on classes, inheritance, encapsulation, and polymorphism.",
-    tags: [
-      "C++",
-      "OOP",
-      "Console Application",
-      "Social Media",
-      "User Management"
-    ]
+      "Air Drawing is a hands-free drawing system built with OpenCV and MediaPipe. It tracks hand landmarks in real time to detect gestures for drawing, erasing, and selecting colors — no mouse or touchscreen needed. Performance is optimized with motion smoothing, gesture debouncing, and dynamic brush scaling, achieving low-latency and stable gesture recognition for seamless real-time interaction.",
+    tags: ["Python", "OpenCV", "MediaPipe", "Computer Vision", "Gesture Recognition", "Real-time"]
   },
   {
     id: 3,
-    title: "Maze Runner",
+    title: "Expense Tracker App",
     description:
-      "A retro-style maze-running game crafted in x86 Assembly Language with procedurally generated mazes, collectibles, enemies, and time-based scoring.",
+      "A secure full-stack personal finance application with multi-currency support, JWT authentication, receipt storage, and a responsive cross-device UI.",
     briefDescription:
-      "Classic maze-running adventure game built in pure x86 Assembly Language featuring 5 unique procedurally generated mazes. Includes collectible items for bonus points, enemy avoidance mechanics, customizable countdown timer, real-time keyboard controls, and dynamic scoring system. Utilizes BIOS interrupts, custom interrupt handlers, and assembly optimization for smooth retro gameplay experience.",
-    tags: [
-      "Assembly Language",
-      "x86",
-      "Game Development",
-      "BIOS Interrupts",
-      "Real-time",
-      "Retro Gaming"
-    ]
+      "A production-ready finance management application built with React (Vite), Tailwind CSS, Node.js, and PostgreSQL. Features multi-currency support, timezone handling, and receipt uploads alongside full transaction CRUD. The backend is secured with JWT authentication and bcrypt hashing, with stored procedures ensuring data integrity. Delivered end-to-end security and a fully responsive cross-device design.",
+    tags: ["React", "Vite", "Tailwind CSS", "Node.js", "Express", "PostgreSQL", "JWT", "bcrypt"]
   },
   {
     id: 4,
     title: "Task Management System",
     description:
-      "A comprehensive database-driven task management system with admin controls, task assignment, status tracking, and team collaboration features.",
+      "A full-stack team task management platform with JWT authentication, a responsive admin dashboard, and a 40% improvement in task retrieval time.",
     briefDescription:
-      "Database-driven task management system designed for team productivity and workflow management. Features secure admin authentication, task creation with deadlines and priorities, team member assignment via email, comprehensive status tracking (Pending, In Progress, Completed, Cancelled), advanced filtering and search capabilities, and priority-based task organization. Built with normalized database schema and clean UI for optimal user experience.",
-    tags: [
-      "React",
-      "Node.js",
-      "MSSQL",
-      "Database Design",
-      "Team Management",
-      "Authentication"
-    ]
+      "Built for team productivity using React, Node.js, and MSSQL. Features JWT-based authentication, an optimized database schema that improved query performance by 40%, and a responsive admin dashboard. Supports task creation with deadlines and priorities, team member assignment via email, and comprehensive status tracking (Pending, In Progress, Completed, Cancelled). Delivered production-ready for real team collaboration.",
+    tags: ["React", "Node.js", "MSSQL", "JWT", "Express", "Database Design", "Admin Dashboard"]
   },
   {
     id: 5,
-    title: "Simon Game",
+    title: "Portfolio Website",
     description:
-      "A classic memory game built with HTML, CSS, jQuery, and JavaScript featuring interactive animations, sound effects, and progressive difficulty levels.",
+      "A modern, responsive portfolio website with smooth animations, interactive project modals, and a contact form — built with pure vanilla JavaScript.",
     briefDescription:
-      "Interactive implementation of the classic Simon electronic memory game with modern web technologies. Features animated button flashes with corresponding sound effects, progressive level difficulty, game over detection with restart functionality, responsive design for all devices, and clean user interface. Built using jQuery for smooth animations and JavaScript for game logic, providing an engaging memory challenge experience.",
-    tags: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "jQuery",
-      "Game Development",
-      "Interactive Design"
-    ]
+      "Professional portfolio built with HTML5, CSS3, and vanilla JavaScript — no frameworks. Features a responsive layout using CSS Grid and Flexbox, smooth CSS animations and transitions, a dynamic project grid with detailed modal popups, a contact form with direct email integration, and smooth-scroll navigation. Optimised for performance and cross-browser compatibility.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX", "CSS Grid", "Flexbox"]
   },
   {
     id: 6,
-    title: "Portfolio Website",
+    title: "Social Network App",
     description:
-      "A modern, responsive portfolio website showcasing development skills with smooth animations, interactive elements, and optimized performance.",
+      "A C++ console-based social networking application demonstrating OOP principles with user login, feeds, likes, comments, reposting, and friend management.",
     briefDescription:
-      "Professional portfolio website built with modern web technologies and design principles. Features responsive design for all devices, smooth CSS animations and transitions, interactive project showcases with detailed modal views, contact form with email integration, SEO optimization for better visibility, fast loading performance, and clean maintainable code structure following best practices. Includes dynamic project loading, smooth scrolling navigation, and an elegant gradient-based design system.",
-    tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX"]
-  },
-  {
-    id: 7,
-    title: "Expense Manager App",
-    description:
-      "A full-stack personal finance app to track income, expenses, and budgets with real-time updates and intuitive UI.",
-    briefDescription:
-      "Comprehensive expense manager built with React, Node.js, Express, and PostgreSQL. Features include responsive design using CSS Grid and Flexbox, interactive dashboards with detailed charts and reports, smooth animations, secure user authentication, and optimized backend performance. Supports adding, editing, and deleting transactions with category-wise expense tracking, monthly comparisons, and notifications. Clean, maintainable codebase following modern best practices and cross-browser compatibility.",
-    tags: [
-      "React",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Responsive Design",
-      "Finance Management"
-    ]
+      "A console-based social network built in C++ to demonstrate core OOP principles in a realistic context. Implements user authentication, a home feed of friends' posts, like/unlike and comment functionality, post reposting, personal user pages, and friend list management. Architecture is grounded in clean OOP design using inheritance, encapsulation, and polymorphism for a maintainable, extensible codebase.",
+    tags: ["C++", "OOP", "Console Application", "Data Structures", "Software Design"]
   }
 ];
 
@@ -290,72 +240,64 @@ function populateModal(project) {
 function generateProjectFeatures(projectId) {
   const featuresMap = {
     1: [
-      "Classic arcade-style gameplay with spaceship controls",
-      "Wave-based alien movement with increasing difficulty",
-      "Bullet collision detection system",
-      "Real-time shooting mechanics for player and aliens",
-      "Top 5 highscore leaderboard system",
-      "2D graphics rendering using Windows GDI",
-      "Keyboard controls (Arrow keys, Spacebar, Enter, Escape)",
-      "Progressive speed increase as game advances"
+      "AI-driven facial recognition and liveness detection using OpenCV and MediaPipe",
+      "Dual-mode authentication: face recognition + fingerprint verification",
+      "Confidence scoring and anomaly detection for suspicious check-ins",
+      "Encrypted biometric templates for secure data processing",
+      "Full-stack MERN + FastAPI architecture for scalable deployment",
+      "Real-time verification pipeline with low-latency response",
+      "Reduced proxy attendance and identity fraud risk to near zero in testing",
+      "Scalable backend designed for campus-wide deployment"
     ],
     2: [
-      "Secure user login and logout system",
-      "Home page displaying friends' posts",
-      "Like and unlike post functionality",
-      "Comment system for user interactions",
-      "Post sharing and memory sharing features",
-      "Personal user pages and profiles",
-      "Friend list management and viewing",
-      "Object-oriented design with clean architecture"
+      "Real-time hand tracking using MediaPipe landmark detection",
+      "Gesture-based controls: draw, erase, and switch colors hands-free",
+      "Motion smoothing for fluid, stable stroke rendering",
+      "Gesture debouncing to prevent unintended inputs",
+      "Dynamic brush scaling based on hand positioning",
+      "Low-latency frame processing with OpenCV",
+      "Completely contactless — no mouse or touchscreen required",
+      "Optimized for smooth real-time user interaction"
     ],
     3: [
-      "5 unique procedurally generated mazes",
-      "Collectible items with point rewards",
-      "Enemy avoidance mechanics",
-      "Customizable countdown timer (1-9 minutes)",
-      "Real-time keyboard input using BIOS interrupts",
-      "Dynamic scoring system based on completion time",
-      "Custom interrupt handlers for precision timing",
-      "Assembly language optimization for smooth gameplay"
+      "Multi-currency support with timezone handling",
+      "Secure JWT authentication with bcrypt password hashing",
+      "Receipt storage for transaction documentation",
+      "Full transaction CRUD with category-wise tracking",
+      "Responsive frontend built with React (Vite) and Tailwind CSS",
+      "RESTful backend using Node.js, Express, and PostgreSQL",
+      "Stored procedures and database constraints for data integrity",
+      "Production-ready with end-to-end security and cross-device design"
     ],
     4: [
-      "Admin registration and authentication system",
-      "Task creation with title, description, and deadlines",
+      "Secure JWT-based authentication system",
+      "Task creation with title, description, deadlines, and priorities",
       "Team member assignment via email",
-      "Comprehensive status tracking system",
-      "Task filtering by status, date, and assignee",
-      "Priority-based task organization (High, Medium, Low)",
-      "Normalized database schema design",
-      "Clean and user-friendly interface"
+      "Status tracking: Pending, In Progress, Completed, Cancelled",
+      "Advanced filtering and search by status, date, and assignee",
+      "Optimised MSSQL schema — 40% faster task retrieval",
+      "Responsive admin dashboard for team oversight",
+      "Production-ready system for real team collaboration"
     ],
     5: [
-      "Interactive button animations with flash effects",
-      "Sound effects for each colored button",
-      "Progressive difficulty with increasing sequences",
-      "Game over detection and restart functionality",
-      "Responsive design for all screen sizes",
-      "jQuery-powered smooth animations",
-      "Memory challenge with visual and audio feedback",
-      "Clean and intuitive user interface"
+      "Responsive layout using CSS Grid and Flexbox",
+      "Dynamic project grid with detailed modal popups",
+      "Smooth CSS animations and hover transitions",
+      "Contact form with direct email client integration",
+      "Smooth-scroll navigation between sections",
+      "Cross-browser compatible and performance optimised",
+      "Vanilla JavaScript only — zero dependencies",
+      "Clean, maintainable code structure"
     ],
     6: [
-      "Modern responsive design with CSS Grid and Flexbox",
-      "Interactive project showcase with detailed modal views",
-      "Smooth CSS animations and transitions",
-      "Contact form with email integration",
-      "Performance optimization and fast loading",
-      "Cross-browser compatibility testing",
-      "Clean and maintainable code structure"
-    ],
-    7: [
-      "Full-stack expense tracker built with React (Vite), Tailwind CSS, Node.js, Express, and PostgreSQL",
-      "Features user registration, transaction CRUD, budget tracking, and multi-currency support",
-      "Secure JWT authentication with bcrypt password hashing",
-      "Modular backend using stored procedures and constraints for data integrity",
-      "Responsive UI with profile settings and optional receipt uploads",
-      "Setup requires Node.js ≥16 and PostgreSQL ≥13 with easy install and run commands",
-      "Clean project structure separating frontend and backend codebases for maintainability"
+      "User authentication with login and logout",
+      "Home feed displaying friends' posts in real time",
+      "Like/unlike and comment functionality",
+      "Post reposting and sharing features",
+      "Personal user pages and profile management",
+      "Friend list management and discovery",
+      "OOP design: inheritance, encapsulation, polymorphism",
+      "Clean C++ console architecture with extensible design"
     ]
   };
 
@@ -459,8 +401,8 @@ downloadCVBtn.addEventListener("click", e => {
 function downloadCV() {
   // Create a link element and trigger download
   const link = document.createElement("a");
-  link.href = "/public/Ghulam_Dastgir_CV.pdf";
-  link.download = "Ghulam_Dastgir_CV.pdf";
+  link.href = "./public/GhulamDastgir_Resume.pdf";
+  link.download = "GhulamDastgir_Resume.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
