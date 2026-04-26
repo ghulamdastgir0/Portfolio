@@ -398,17 +398,29 @@ downloadCVBtn.addEventListener("click", e => {
 });
 
 // CV Download function
-function downloadCV() {
-  // Create a link element and trigger download
-  const link = document.createElement("a");
-  link.href = "./public/GhulamDastgir_Resume.pdf";
-  link.download = "GhulamDastgir_Resume.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+async function downloadCV() {
+  try {
+    const response = await fetch("./public/GhulamDastgirResume.pdf");
 
-  // Show success notification
-  showNotification("CV downloaded successfully!", "success");
+    if (!response.ok) throw new Error("File not found");
+
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "GhulamDastgir_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url); // clean up
+    showNotification("CV downloaded successfully!", "success");
+
+  } catch (error) {
+    showNotification("Download failed. File not found!", "error");
+    console.error("Download error:", error);
+  }
 }
 
 // Notification function
