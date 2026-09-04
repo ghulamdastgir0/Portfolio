@@ -77,25 +77,15 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* full label from sm up */}
+          {/* labeled at every size — an icon alone doesn't say what it does */}
           <a
             href={site.resume}
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-2 px-4 py-2 text-sm font-semibold text-ink-950 transition-transform hover:-translate-y-0.5 sm:flex"
+            className="flex items-center gap-1.5 whitespace-nowrap rounded-xl bg-gradient-to-r from-accent to-accent-2 px-3 py-2 text-xs font-semibold text-ink-950 transition-transform hover:-translate-y-0.5 sm:gap-2 sm:px-4 sm:text-sm"
           >
-            <FileText className="h-4 w-4" />
+            <FileText className="h-4 w-4 shrink-0" />
             Resume
-          </a>
-          {/* icon-only on phones, so it's never hidden behind the menu */}
-          <a
-            href={site.resume}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Download résumé"
-            className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-accent to-accent-2 text-ink-950 transition-transform hover:-translate-y-0.5 sm:hidden"
-          >
-            <FileText className="h-4 w-4" />
           </a>
           <button
             aria-label="Toggle menu"
