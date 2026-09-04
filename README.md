@@ -7,7 +7,7 @@ project grid, a spring-animated project modal, and an ambient animated backgroun
 
 ## 🚀 Live Demo
 
-Deployed on **Vercel** — <!-- paste your vercel.app URL here -->
+Deployed on **Vercel** — [<!-- paste your vercel.app URL here -->](https://portfolio-mu-inky-30.vercel.app/)
 
 ## 🧱 Stack
 
