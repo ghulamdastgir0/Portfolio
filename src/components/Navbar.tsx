@@ -77,6 +77,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
+          {/* full label from sm up */}
           <a
             href={site.resume}
             target="_blank"
@@ -85,6 +86,16 @@ export function Navbar() {
           >
             <FileText className="h-4 w-4" />
             Resume
+          </a>
+          {/* icon-only on phones, so it's never hidden behind the menu */}
+          <a
+            href={site.resume}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Download résumé"
+            className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-accent to-accent-2 text-ink-950 transition-transform hover:-translate-y-0.5 sm:hidden"
+          >
+            <FileText className="h-4 w-4" />
           </a>
           <button
             aria-label="Toggle menu"
