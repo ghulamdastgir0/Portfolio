@@ -7,7 +7,7 @@ project grid, a spring-animated project modal, and an ambient animated backgroun
 
 ## 🚀 Live Demo
 
-https://ghulamdastgir0.github.io/Portfolio/ <!-- update if the deploy path changes -->
+Deployed on **Vercel** — <!-- paste your vercel.app URL here -->
 
 ## 🧱 Stack
 
@@ -83,5 +83,6 @@ resume link and socials are in `site.ts`.
 
 ## 🚢 Deploy
 
-Static output in `dist/`. For GitHub Pages project sites, set
-`base: "/Portfolio/"` in `vite.config.ts` before building.
+Deployed on **Vercel** (framework preset: Vite; build `npm run build`, output
+`dist`). `base: "./"` in `vite.config.ts` keeps the output portable to any host
+or sub-path.

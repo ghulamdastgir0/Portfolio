@@ -1,5 +1,5 @@
-import { useRef, useState, type FormEvent } from "react";
-import { motion } from "motion/react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import { Mail, MapPin, Phone, Github, Linkedin, Send, Check, AlertCircle } from "lucide-react";
 import { site } from "../data/site";
 import { SectionHeading } from "./SectionHeading";
@@ -16,6 +16,17 @@ export function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  const dismissRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  // auto-hide the status note a few seconds after it appears
+  function flash(next: "ok" | "error", text: string) {
+    if (dismissRef.current) clearTimeout(dismissRef.current);
+    setStatus(next);
+    setMessage(text);
+    dismissRef.current = setTimeout(() => setStatus("idle"), next === "ok" ? 4500 : 7000);
+  }
+
+  useEffect(() => () => clearTimeout(dismissRef.current), []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -36,11 +47,11 @@ export function Contact() {
     };
 
     if (!payload.name || !payload.email || !payload.message) {
-      setStatus("error");
-      setMessage("Please fill in your name, email, and a message.");
+      flash("error", "Please fill in your name, email, and a message.");
       return;
     }
 
+    if (dismissRef.current) clearTimeout(dismissRef.current);
     setStatus("sending");
     setMessage("");
 
@@ -57,21 +68,20 @@ export function Contact() {
       const success = data.success === "true" || data.success === true;
 
       if (res.ok && success) {
-        setStatus("ok");
-        setMessage("Thanks — your message is on its way. I'll get back to you soon.");
         form.reset();
+        flash("ok", "Thanks — your message is on its way. I'll get back to you soon.");
       } else if (typeof data.message === "string" && /activat/i.test(data.message)) {
         // FormSubmit's one-time setup step (owner clicks the link in their inbox once).
-        setStatus("error");
-        setMessage(
+        flash(
+          "error",
           `This form needs a one-time activation. In the meantime, email me directly at ${site.email}.`,
         );
       } else {
         throw new Error(data.message || "Bad response");
       }
     } catch {
-      setStatus("error");
-      setMessage(
+      flash(
+        "error",
         `Couldn't send that just now. Email me directly at ${site.email} and I'll reply.`,
       );
     }
@@ -187,24 +197,28 @@ export function Contact() {
             {status === "sending" ? "Sending…" : "Send message"}
           </button>
 
-          {status !== "idle" && status !== "sending" && (
-            <motion.p
-              initial={{ opacity: 0, y: -6 }}
-              animate={{ opacity: 1, y: 0 }}
-              className={`flex items-start gap-2 rounded-xl border px-4 py-3 text-sm ${
-                status === "ok"
-                  ? "border-emerald-400/25 bg-emerald-400/10 text-emerald-300"
-                  : "border-red-400/25 bg-red-400/10 text-red-300"
-              }`}
-            >
-              {status === "ok" ? (
-                <Check className="mt-0.5 h-4 w-4 shrink-0" />
-              ) : (
-                <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
-              )}
-              <span>{message}</span>
-            </motion.p>
-          )}
+          <AnimatePresence>
+            {(status === "ok" || status === "error") && (
+              <motion.p
+                initial={{ opacity: 0, y: -6, height: 0 }}
+                animate={{ opacity: 1, y: 0, height: "auto" }}
+                exit={{ opacity: 0, y: -6, height: 0, marginTop: 0 }}
+                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                className={`flex items-start gap-2 overflow-hidden rounded-xl border px-4 py-3 text-sm ${
+                  status === "ok"
+                    ? "border-emerald-400/25 bg-emerald-400/10 text-emerald-300"
+                    : "border-red-400/25 bg-red-400/10 text-red-300"
+                }`}
+              >
+                {status === "ok" ? (
+                  <Check className="mt-0.5 h-4 w-4 shrink-0" />
+                ) : (
+                  <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                )}
+                <span>{message}</span>
+              </motion.p>
+            )}
+          </AnimatePresence>
         </motion.form>
       </div>
     </section>
