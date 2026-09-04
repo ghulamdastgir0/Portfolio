@@ -1,56 +1,87 @@
-# 🌟 Personal Portfolio Website
+# 🌟 Ghulam Dastgir — Portfolio
 
-A modern, responsive portfolio website showcasing my development skills and projects. Built with clean HTML, CSS, and JavaScript, featuring smooth animations, interactive elements, and optimized performance.
+A modern, animated developer portfolio built with **React + TypeScript + Vite**,
+styled with **Tailwind CSS v4**, and animated with **Motion** (Framer Motion).
+Dark, cinematic single-page design with scroll-reveal sections, a pointer-tilt
+project grid, a spring-animated project modal, and an ambient animated background.
 
 ## 🚀 Live Demo
 
-(https://ghulamdastgir0.github.io/Portfolio/) <!-- Replace with your actual URL -->
+https://ghulamdastgir0.github.io/Portfolio/ <!-- update if the deploy path changes -->
 
-## ✨ Features
+## 🧱 Stack
 
-### 🎨 Design & UI/UX
-- **Modern Gradient Design** - Beautiful gradient backgrounds with animated floating elements
-- **Responsive Layout** - Optimized for all devices (desktop, tablet, mobile)
-- **Smooth Animations** - CSS transitions and hover effects throughout
-- **Interactive Elements** - Engaging user interactions and feedback
-- **Clean Typography** - Professional font choices with proper hierarchy
+| Layer      | Tech |
+|------------|------|
+| Framework  | React 18 + TypeScript |
+| Build tool | Vite 6 |
+| Styling    | Tailwind CSS v4 (`@tailwindcss/vite`) |
+| Animation  | `motion` (motion/react) |
+| Icons      | `lucide-react` |
+| Fonts      | Space Grotesk (display), Inter (body), JetBrains Mono (accents) |
 
-### 🛠️ Technical Features
-- **Vanilla JavaScript** - No frameworks, pure JavaScript for optimal performance
-- **CSS Grid & Flexbox** - Modern layout techniques for responsive design
-- **Smooth Scrolling** - Enhanced navigation experience
-- **Form Validation** - Client-side validation for contact form
-- **Email Integration** - Direct email client integration for contact
-- **Performance Optimized** - Fast loading times and efficient code
+The visual language (colors, typography, spacing, motion rules) is captured as a
+Stitch design system and documented inline in `src/index.css` via `@theme`.
 
-### 📱 Sections
-- **Hero Section** - Introduction with animated elements and social links
-- **About Section** - Personal information, skills, and downloadable CV
-- **Projects Section** - Showcase of 6 major projects with detailed modals
-- **Contact Section** - Contact form and information
+## 📱 Sections
 
-## 🛠️ Technologies Used
+- **Hero** — staggered word-by-word headline reveal, animated code card
+- **About** — bio, portrait with gradient glow, stat tiles
+- **Experience** — vertical timeline with a drawn-in gradient rail (Amperor Tech, 10Pearls)
+- **Skills & Tools** — grouped chips + an infinite marquee
+- **Selected Work** — asymmetric project grid, pointer-follow tilt + glow, detail modal
+- **Contact** — split info / form, `mailto:` submission
 
-### Frontend
-- **HTML5** - Semantic markup and structure
-- **CSS3** - Modern styling with Grid, Flexbox, and animations
-- **JavaScript (ES6+)** - Interactive functionality and DOM manipulation
+## 🗂️ Structure
 
-### Design & UX
-- **Responsive Design** - Mobile-first approach
-- **CSS Animations** - Smooth transitions and hover effects
-- **Gradient Design System** - Consistent color scheme
-- **Typography** - Google Fonts (Poppins)
+```
+src/
+  components/     UI + section components
+  data/           site.ts, projects.ts, experience.ts, skills.ts  (edit content here)
+  lib/motion.ts   shared animation variants
+  index.css       Tailwind theme tokens + base styles
+public/           resume PDF, portrait, favicon
+legacy/           the previous vanilla HTML/CSS/JS site (kept for reference)
+```
 
-### Tools & Optimization
-- **Performance Optimization** - Efficient code and fast loading
-- **Cross-browser Compatibility** - Tested across major browsers
-- **SEO Optimization** - Proper meta tags and structure
-- **Accessibility** - WCAG guidelines compliance
+## 🛠️ Getting Started
 
-## 🚀 Getting Started
+```bash
+npm install
+npm run dev      # http://localhost:5173 (client-only, HMR)
+npm run build    # type-check + client build + SSR prerender  ->  dist/
+npm run preview  # serve the production build
+```
 
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Text editor (VS Code, Sublime Text, etc.)
-- Basic knowledge of HTML, CSS, and JavaScript
+### Rendering — "loads at once"
+
+`npm run build` runs three steps:
+
+1. `vite build` — the normal client bundle.
+2. `vite build --ssr src/entry-server.tsx` — a server bundle.
+3. `node prerender.js` — renders `<App />` to static HTML with
+   `react-dom/server` and inlines it into `dist/index.html`.
+
+So the deployed page ships **fully rendered markup** (good for first paint and
+SEO); the client then `hydrateRoot`s it and the Motion animations play exactly
+as before. Output stays 100% static — no Node server at runtime. A `<noscript>`
+block reveals all content if JS is disabled.
+
+### Contact form
+
+Wired to [FormSubmit](https://formsubmit.co) (`https://formsubmit.co/ajax/<email>`),
+no API key. **One-time setup:** the first submission makes FormSubmit email an
+"Activate Form" link to the address in `src/data/site.ts` — click it once and
+submissions then land in that inbox. Until then the form shows an
+"email me directly" fallback. A honeypot field guards against bots.
+
+## ✏️ Editing content
+
+All copy lives in `src/data/`. Add a project by appending an object to
+`projects` in `src/data/projects.ts`; update roles in `experience.ts`; the
+resume link and socials are in `site.ts`.
+
+## 🚢 Deploy
+
+Static output in `dist/`. For GitHub Pages project sites, set
+`base: "/Portfolio/"` in `vite.config.ts` before building.

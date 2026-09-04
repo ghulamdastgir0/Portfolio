@@ -52,6 +52,33 @@ const projects = [
     briefDescription:
       "A console-based social network built in C++ to demonstrate core OOP principles in a realistic context. Implements user authentication, a home feed of friends' posts, like/unlike and comment functionality, post reposting, personal user pages, and friend list management. Architecture is grounded in clean OOP design using inheritance, encapsulation, and polymorphism for a maintainable, extensible codebase.",
     tags: ["C++", "OOP", "Console Application", "Data Structures", "Software Design"]
+  },
+  {
+    id: 7,
+    title: "OpsFlow – AI-Assisted Corporate Operations Platform",
+    description:
+      "A multi-tenant corporate operations platform where employees file expense, purchase, and leave requests through a web chat assistant or Slack, with policy-aware routing and multi-stage approvals.",
+    briefDescription:
+      "OpsFlow is a multi-tenant, AI-assisted corporate operations platform that lets employees file expense, purchase, and leave requests via a web chat assistant or Slack. Built as a NestJS + Next.js monorepo with PostgreSQL and Prisma, it integrates LangGraph and Gemini (@langchain/google-genai) for a tool-calling assistant agent. It implements policy-aware request routing with configurable per-manager spend delegations and multi-stage manager–finance approval workflows, plus a separate platform-admin plane for provisioning tenants with strict tenant isolation and role-based access control across every endpoint. A production-grade Slack integration (OAuth install/login flows, event deduplication, role-based broadcasts) sits alongside a fully audited approval pipeline.",
+    tags: ["NestJS", "Next.js", "PostgreSQL", "Prisma", "LangGraph", "Gemini", "Slack API", "Agentic AI", "RBAC"]
+  },
+  {
+    id: 8,
+    title: "AI Recruitment Pipeline Management System",
+    description:
+      "A capstone-level recruitment platform with AI-driven CV parsing, semantic candidate–job matching, and an AI voice interview system with client-side proctoring.",
+    briefDescription:
+      "A capstone-level AI Recruitment Pipeline Management System built with NestJS, Prisma, and pgvector. It performs AI-driven CV parsing, semantic candidate–job matching, and ranking using locally-hosted embeddings (HuggingFace Transformers). An AI voice interview system orchestrates conversation flow with LangGraph, uses Groq for LLM/Whisper/TTS, and runs MediaPipe + TensorFlow.js client-side proctoring. Retrieval-Augmented Generation grounds an HR explainability chat in company policy and drives automated candidate email notifications via Brevo. Role-based (Super Admin / HR Admin / Hiring Manager) tool-calling assistant workflows are gated with confirmation on mutating actions and full audit logging.",
+    tags: ["NestJS", "Prisma", "pgvector", "RAG", "LangGraph", "Groq", "HuggingFace", "TensorFlow.js", "MediaPipe"]
+  },
+  {
+    id: 9,
+    title: "Smart Parking Management System with Agentic AI Assistant",
+    description:
+      "A full-stack smart parking platform with QR-based check-in/out, live slot occupancy tracking, automatic overtime billing, and an in-app agentic AI assistant.",
+    briefDescription:
+      "A full-stack Smart Parking Management System built with NestJS, Prisma, PostgreSQL, and Next.js (React 19). It provides QR-code based check-in/check-out, live slot occupancy tracking, and automatic overtime/extension billing via a scheduled monitoring cron. \"Adam,\" an in-app AI assistant built with LangGraph and Gemini, offers role-based tool access (RBAC) and confirm-before-mutate safeguards for sensitive actions, plus a policy-document RAG tool using locally-embedded (HuggingFace Transformers) brute-force cosine search for AI-assisted policy Q&A. Both services are deployed to Google Cloud Run with Dockerized CI/CD via Cloud Build, Supabase Postgres, Socket.IO real-time sync, and hardened security (helmet, RLS, rate limiting).",
+    tags: ["NestJS", "Prisma", "PostgreSQL", "Next.js", "LangGraph", "Gemini", "Socket.IO", "Google Cloud Run", "Docker"]
   }
 ];
 
@@ -298,6 +325,39 @@ function generateProjectFeatures(projectId) {
       "Friend list management and discovery",
       "OOP design: inheritance, encapsulation, polymorphism",
       "Clean C++ console architecture with extensible design"
+    ],
+    7: [
+      "Multi-tenant architecture with strict tenant isolation",
+      "File requests via a web chat assistant or Slack",
+      "LangGraph + Gemini tool-calling assistant agent",
+      "Policy-aware routing with per-manager spend delegations",
+      "Multi-stage manager–finance approval workflows",
+      "Separate platform-admin plane for provisioning tenants",
+      "Role-based access control enforced on every endpoint",
+      "Production Slack integration: OAuth, event dedup, role-based broadcasts",
+      "Fully audited approval pipeline"
+    ],
+    8: [
+      "AI-driven CV parsing and structured extraction",
+      "Semantic candidate–job matching and ranking with pgvector",
+      "Locally-hosted embeddings via HuggingFace Transformers",
+      "AI voice interview system orchestrated with LangGraph",
+      "Groq-powered LLM, Whisper transcription, and TTS",
+      "MediaPipe + TensorFlow.js client-side proctoring",
+      "RAG-grounded HR explainability chat on company policy",
+      "Automated candidate email notifications via Brevo",
+      "Role-based tool-calling with confirmation-gated mutations and audit logging"
+    ],
+    9: [
+      "QR-code based check-in and check-out",
+      "Live slot occupancy tracking across multiple lots",
+      "Automatic overtime/extension billing via a scheduled cron",
+      '"Adam" agentic AI assistant built with LangGraph and Gemini',
+      "Role-based tool access with confirm-before-mutate safeguards",
+      "Policy-document RAG tool with locally-embedded cosine search",
+      "Deployed to Google Cloud Run with Dockerized CI/CD via Cloud Build",
+      "Supabase Postgres with Socket.IO real-time sync",
+      "Hardened security: helmet, RLS, rate limiting"
     ]
   };
 
@@ -481,7 +541,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Active navigation highlighting
 window.addEventListener("scroll", () => {
-  const sections = ["home", "about", "projects", "contact"];
+  const sections = ["home", "about", "experience", "projects", "contact"];
   const navLinks = document.querySelectorAll(".nav_bar a");
 
   let current = "";
@@ -548,7 +608,7 @@ window.addEventListener("scroll", () => {
   }
 
   // Active navigation highlighting (existing code)
-  const sections = ["home", "about", "projects", "contact"];
+  const sections = ["home", "about", "experience", "projects", "contact"];
   const navLinks = document.querySelectorAll(".nav_bar a");
 
   let current = "";
